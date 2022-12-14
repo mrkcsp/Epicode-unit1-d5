@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        margin-left: 4rem;
+        margin-top: 4rem;
+      }
+      .container div {
+        width: 70px;
+        height: 60px;
+        border: 1px solid black;
+        display: inline-block;
+      }
+
+      /* bordi div pari colorati */
+      .container div:nth-child(even) {
+        border-color: red;
+      } 
+        
+      /* lettera D del secondo quadrato blu*/
+      .container div:nth-child(odd) span:nth-child(even) {
+        color: green;
+      } 
+
+      /* lettere ABC del sesto quadrato */
+      .container div:nth-child(6) :not(span:last-of-type) {
+        color: yellow;
+      } 
+
+      /* lettera A esterna ai riquadri in basso */
+      div  {
+        position: relative;
+      }
+
+      div span:nth-child(1){
+        position: absolute;
+        left: 27px;
+        top: 60px;
+      }
+
+      /* lettera B esterna ai riquadri in alto */
+      div span:nth-child(2){
+        position: absolute;
+        left: 27px;
+        bottom: 60px;
+      }
+
+      /* lettera D dell'ultimo quadrato esterna al riquadro a destra */
+      .container div:last-child span:nth-child(4){
+        position: absolute;
+        left: 75px;
+        top: 20px;
+      }
+
+      /* lettera D del primo quadrato esterna al riquadro a sinistra */
+      .container div:first-child span:nth-child(4){
+        position: absolute;
+        left: -20px;
+        top: 20px;
+      }
+
+      /* tutte le lettere spariscono per rimuovere lo spazio tra i quadrati*/
+      .container {
+        font-size:0;
+      }
+
+      /* sistema il problema del font a 0*/
+      .container div {
+        font-size:1rem;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <span>A</span>
+        <span>B</span>
+        <span>C</span>
+        <span>D</span>
+      </div>
+      <div>
+        <span>A</span>
+        <span>B</span>
+        <span>C</span>
+        <span>D</span>
+      </div>
+      <div>
+        <span>A</span>
+        <span>B</span>
+        <span>C</span>
+        <span>D</span>
+      </div>
+      <div>
+        <span>A</span>
+        <span>B</span>
+        <span>C</span>
+        <span>D</span>
+      </div>
+      <div>
+        <span>A</span>
+        <span>B</span>
+        <span>C</span>
+        <span>D</span>
+      </div>
+      <div>
+        <span>A</span>
+        <span>B</span>
+        <span>C</span>
+        <span>D</span>
+      </div>
+      <div>
+        <span>A</span>
+        <span>B</span>
+        <span>C</span>
+        <span>D</span>
+      </div>
+      <div>
+        <span>A</span>
+        <span>B</span>
+        <span>C</span>
+        <span>D</span>
+      </div>
+      <div>
+        <span>A</span>
+        <span>B</span>
+        <span>C</span>
+        <span>D</span>
+      </div>
+      <div>
+        <span>A</span>
+        <span>B</span>
+        <span>C</span>
+        <span>D</span>
+      </div>
+    </div>
+  </body>
+</html>
