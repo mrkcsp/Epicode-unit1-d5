@@ -1,21 +1,99 @@
+banner {
+  text-align: center;
+}
+
 .container {
-    display: flex;
-  }
+  display: flex;
+}
+
+.lettere {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lettere div {
+  width: 70px;
+  height: 20px;
+}
+
+
+#l-top span {
+  position: relative;
+  bottom: 3px;
+  right: 32px;
+}
+
+#l-bottom span {
+  position: relative;
+  right: 32px;
+  top: 7px;
+}
+
+.numeri span {
+  position: relative;
+  top: 23px;
+}
+
+.numeri:last-child span {
+  left: 16px;
+}
+
+.numeri:first-child span {
+  right: 16px;
+}
 
 #main-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;  
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3% 29%;
+  position: absolute;
+}
 
-  .container div {
-    width: 70px;
-    height: 60px;
-    border: 1px solid black;
-    background-color: orange;
-  }
+.container:nth-child(odd) div:not(.numeri):nth-child(odd) {
+  background-color: rgb(116, 78, 38);
+}
 
-  .container div:hover{
-    background-color: red;
-  }
+.container:nth-child(even) div:not(.numeri):nth-child(odd) {
+  background-color: black;
+}
+
+
+.container:nth-child(even) div:not(.numeri):nth-child(even) {
+  background-color: rgb(116, 78, 38);
+}
+
+.container:nth-child(odd) div:not(.numeri):nth-child(even) {
+  background-color: black;
+}
+
+.container div:not(.numeri) {
+  position: relative;
+  width: 70px;
+  height: 70px;
+}
+
+.container:nth-child(odd) div:not(.numeri):nth-child(odd):hover {
+  background-color: red;
+}
+
+.container:nth-child(even) div:not(.numeri):nth-child(odd):hover {
+  background-color: red;
+}
+
+.container:nth-child(even) div:not(.numeri):nth-child(even):hover {
+  background-color: red;
+}
+
+.container:nth-child(odd) div:not(.numeri):nth-child(even):hover {
+  background-color: red;
+}
+
+
+/*  cosi non va
+
+.-container div:not(.numeri):hover {
+  background-color: red;
+}
+
+*/
